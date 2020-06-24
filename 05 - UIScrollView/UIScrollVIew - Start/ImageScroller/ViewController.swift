@@ -30,36 +30,52 @@ import UIKit
 
 class ViewController: UIViewController {
   
+  // MARK: - Outlets
+  
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var scrollView: UIScrollView!
   
+  // MARK: - View Life Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    imageView.frame.size = imageView.image!.size
-
-    // Configure Scroll View
+    // The order of methods called is important. When not set this way centering does not work.
     scrollView.delegate = self
-    scrollView.contentSize = imageView.image!.size
+    imageView.frame.size = imageView.image!.size
     setZoomParameters(scrollView.bounds.size)
+    centerImageView()
   }
   
   override func viewWillLayoutSubviews() {
-    // Adjust Scroll View when the device is rotated
+    // Override Necessary for laying out view when device rotates
     setZoomParameters(scrollView.bounds.size)
+    centerImageView()
   }
   
   // MARK: - Helper methods
   
-  private func setZoomParameters(_ scrollviewSize: CGSize) {
-    let imageSize = imageView.bounds.size
-    let widthScale = scrollviewSize.width / imageSize.width
-    let heightScale = scrollviewSize.height / imageSize.height
-    let minimumScale = min(widthScale, heightScale)
+  private func centerImageView() {
+    let scrollViewSize = scrollView.bounds.size
+    let imageSize = imageView.frame.size
     
+    let horizontalSpace = imageSize.width < scrollViewSize.width ? (scrollViewSize.width - imageSize.width) / 2 : 0
+    let verticalSpace = imageSize.height < scrollViewSize.height ? (scrollViewSize.height - imageSize.height) / 2 : 0
+    
+    scrollView.contentInset = UIEdgeInsets(top: verticalSpace,
+                                           left: horizontalSpace,
+                                           bottom: verticalSpace,
+                                           right: horizontalSpace)
+  }
+  
+  private func setZoomParameters(_ scrollViewSize: CGSize) {
+    let imageSize = imageView.bounds.size
+    let widthScale = scrollViewSize.width / imageSize.width
+    let heightScale = scrollViewSize.height / imageSize.height
+    let minScale = min(widthScale, heightScale)
+    
+    scrollView.zoomScale = minScale
     scrollView.maximumZoomScale = 3.0
-    scrollView.zoomScale = minimumScale
-    scrollView.minimumZoomScale = minimumScale
+    scrollView.minimumZoomScale = minScale
   }
 }
 
