@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dMf-wh-djy">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Axh-TU-BPl">
+            <objects>
+                <viewController id="dMf-wh-djy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="soN-2W-yNh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJP-FV-H6y">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pnp-LG-1bx">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="827.66666666666663"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ray-wenderlich.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="D1I-Ax-DC7">
+                                                <rect key="frame" x="86" y="0.0" width="203" height="203"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="D1I-Ax-DC7" secondAttribute="height" multiplier="1:1" id="RtF-nO-qpi"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ray Wenderlich" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvk-hH-Zpa">
+                                                <rect key="frame" x="74.000000000000014" y="223" width="227.33333333333337" height="40.666666666666686"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9ck-PL-c1X" customClass="TextView" customModule="AutoLayoutScrollView" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="283.66666666666674" width="375" height="544"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <mutableString key="text">Ray is part of a great team - the raywenderlich.com team, a group of over 100 developers and editors from across the world. He and the rest of the team are passionate both about making apps and teaching others the techniques to make them.
+
+Ray founded the software development company called Razeware which employs a variety of developers all over the world to design tutorials and even better apps.
+
+Ray has spoken at numerous conferences has even developed his own conference: RWDevCon. RWDevCon features some of the brightest developers in the iOS space in a tutorial based speaking format so that the audience not only understands the concepts, but actually gets to put it into practice.
+
+When Ray’s not programming, he’s probably playing video games, role playing games, or board games.
+</mutableString>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="sideInset">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Pnp-LG-1bx" firstAttribute="leading" secondItem="cJP-FV-H6y" secondAttribute="leading" id="7mk-QV-xnL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pnp-LG-1bx" secondAttribute="bottom" id="8Ry-fr-NxS"/>
+                                    <constraint firstItem="Pnp-LG-1bx" firstAttribute="top" secondItem="cJP-FV-H6y" secondAttribute="top" id="g9W-6h-dU6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pnp-LG-1bx" secondAttribute="trailing" id="hom-et-39D"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="9gY-Vd-4sr"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="2Sr-lS-iXO"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cJP-FV-H6y" firstAttribute="leading" secondItem="HHe-Ic-xBo" secondAttribute="leading" id="SeI-g3-7BZ"/>
+                            <constraint firstItem="Pnp-LG-1bx" firstAttribute="width" secondItem="HHe-Ic-xBo" secondAttribute="width" id="gYP-tn-JZM"/>
+                            <constraint firstItem="D1I-Ax-DC7" firstAttribute="height" secondItem="soN-2W-yNh" secondAttribute="height" multiplier="0.25" id="meF-rA-QvH"/>
+                            <constraint firstItem="HHe-Ic-xBo" firstAttribute="trailing" secondItem="cJP-FV-H6y" secondAttribute="trailing" id="p45-jS-J2N"/>
+                            <constraint firstItem="cJP-FV-H6y" firstAttribute="top" secondItem="HHe-Ic-xBo" secondAttribute="top" id="qYq-E1-mfy"/>
+                            <constraint firstItem="cJP-FV-H6y" firstAttribute="bottom" secondItem="HHe-Ic-xBo" secondAttribute="bottom" id="spK-ha-wZi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HHe-Ic-xBo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6u-v6-NaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="87.192118226600982"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ray-wenderlich.jpg" width="320" height="240"/>
+    </resources>
+</document>
