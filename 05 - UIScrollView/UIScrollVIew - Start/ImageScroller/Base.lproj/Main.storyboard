@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zombies.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tZf-sh-gvZ">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vampire Toucan" translatesAutoresizingMaskIntoConstraints="NO" id="tZf-sh-gvZ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -43,6 +43,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="zombies.jpg" width="2592" height="1936"/>
+        <image name="Vampire Toucan" width="2229" height="3172"/>
     </resources>
 </document>

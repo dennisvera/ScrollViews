@@ -29,15 +29,43 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var scrollView: UIScrollView!
   
-
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    imageView.frame.size = imageView.image!.size
+
+    // Configure Scroll View
+    scrollView.delegate = self
     scrollView.contentSize = imageView.image!.size
+    setZoomParameters(scrollView.bounds.size)
+  }
+  
+  override func viewWillLayoutSubviews() {
+    // Adjust Scroll View when the device is rotated
+    setZoomParameters(scrollView.bounds.size)
+  }
+  
+  // MARK: - Helper methods
+  
+  private func setZoomParameters(_ scrollviewSize: CGSize) {
+    let imageSize = imageView.bounds.size
+    let widthScale = scrollviewSize.width / imageSize.width
+    let heightScale = scrollviewSize.height / imageSize.height
+    let minimumScale = min(widthScale, heightScale)
     
+    scrollView.maximumZoomScale = 3.0
+    scrollView.zoomScale = minimumScale
+    scrollView.minimumZoomScale = minimumScale
+  }
+}
+
+extension ViewController: UIScrollViewDelegate {
+  
+  func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+    return imageView
   }
 }
