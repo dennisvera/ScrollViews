@@ -102,43 +102,31 @@ The male Vampire Toucan is distinguished by an enormous flowing tail and an elab
             </objects>
             <point key="canvasLocation" x="302" y="87"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="JtE-hI-cpQ">
             <objects>
-                <viewController id="jQV-Fk-nhv" sceneMemberID="viewController">
+                <viewController id="jQV-Fk-nhv" customClass="ImageViewController" customModule="ImageScroller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lGB-fQ-Jqn">
-                        <rect key="frame" x="0.0" y="0.0" width="650" height="140"/>
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25C-wN-ZoJ">
-                                <rect key="frame" x="0.0" y="0.0" width="650" height="140"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25C-wN-ZoJ">
+                                <rect key="frame" x="-10" y="0.0" width="355" height="180"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zex-5U-TaD">
-                                        <rect key="frame" x="10" y="0.0" width="620" height="140"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zex-5U-TaD">
+                                        <rect key="frame" x="10" y="0.0" width="1400" height="180"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toucan_skeleton.png" translatesAutoresizingMaskIntoConstraints="NO" id="tMx-EX-o3m">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="tMx-EX-o3m" secondAttribute="height" multiplier="1:1" id="KNB-7A-vTt"/>
-                                                </constraints>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toucan_skeleton.png" translatesAutoresizingMaskIntoConstraints="NO" id="tMx-EX-o3m">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="180"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toucan_musculature.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oj4-eh-nGc">
-                                                <rect key="frame" x="160" y="0.0" width="140" height="140"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Oj4-eh-nGc" secondAttribute="height" multiplier="1:1" id="0NI-xg-8zc"/>
-                                                </constraints>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toucan_musculature.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oj4-eh-nGc">
+                                                <rect key="frame" x="355" y="0.0" width="335" height="180"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toucan_surface.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qpf-0C-KW2">
-                                                <rect key="frame" x="320" y="0.0" width="140" height="140"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Qpf-0C-KW2" secondAttribute="height" multiplier="1:1" id="5VF-aG-RAE"/>
-                                                </constraints>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toucan_surface.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qpf-0C-KW2">
+                                                <rect key="frame" x="710" y="0.0" width="335" height="180"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toucan_cartoon.png" translatesAutoresizingMaskIntoConstraints="NO" id="13e-tp-kpS">
-                                                <rect key="frame" x="480" y="0.0" width="140" height="140"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="13e-tp-kpS" secondAttribute="height" multiplier="1:1" id="cey-6s-Shb"/>
-                                                </constraints>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toucan_cartoon.png" translatesAutoresizingMaskIntoConstraints="NO" id="13e-tp-kpS">
+                                                <rect key="frame" x="1065" y="0.0" width="335" height="180"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -147,27 +135,46 @@ The male Vampire Toucan is distinguished by an enormous flowing tail and an elab
                                 <constraints>
                                     <constraint firstItem="Zex-5U-TaD" firstAttribute="leading" secondItem="25C-wN-ZoJ" secondAttribute="leading" constant="10" id="2ZX-mm-6LZ"/>
                                     <constraint firstAttribute="bottom" secondItem="Zex-5U-TaD" secondAttribute="bottom" id="4dH-7Y-M50"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zex-5U-TaD" secondAttribute="trailing" constant="10" id="Ax6-wi-nti"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zex-5U-TaD" secondAttribute="trailing" constant="-10" id="Ax6-wi-nti"/>
                                     <constraint firstItem="Zex-5U-TaD" firstAttribute="top" secondItem="25C-wN-ZoJ" secondAttribute="top" id="ySW-xH-EN5"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="HdL-bw-Ssq"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="kF6-eS-gm2"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jQV-Fk-nhv" id="joH-3w-gn8"/>
+                                </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="h6q-fb-NjH">
+                                <rect key="frame" x="0.0" y="143" width="335" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.086274509799999996" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="pageController:" destination="1Xa-nY-Utn" eventType="valueChanged" id="91c-bk-su8"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Zex-5U-TaD" firstAttribute="height" secondItem="lGB-fQ-Jqn" secondAttribute="height" id="5Kf-7e-w11"/>
+                            <constraint firstAttribute="trailing" secondItem="h6q-fb-NjH" secondAttribute="trailing" id="6nb-R9-2MP"/>
                             <constraint firstItem="25C-wN-ZoJ" firstAttribute="top" secondItem="lGB-fQ-Jqn" secondAttribute="top" id="H5S-Gr-SLc"/>
-                            <constraint firstItem="25C-wN-ZoJ" firstAttribute="leading" secondItem="lGB-fQ-Jqn" secondAttribute="leading" id="cd9-gw-UNg"/>
+                            <constraint firstItem="h6q-fb-NjH" firstAttribute="leading" secondItem="lGB-fQ-Jqn" secondAttribute="leading" id="Ji5-fC-Oo3"/>
+                            <constraint firstItem="tMx-EX-o3m" firstAttribute="width" secondItem="lGB-fQ-Jqn" secondAttribute="width" id="axi-Fk-QyM"/>
+                            <constraint firstItem="25C-wN-ZoJ" firstAttribute="leading" secondItem="lGB-fQ-Jqn" secondAttribute="leading" constant="-10" id="cd9-gw-UNg"/>
                             <constraint firstAttribute="bottom" secondItem="25C-wN-ZoJ" secondAttribute="bottom" id="owD-oP-fdZ"/>
-                            <constraint firstAttribute="trailing" secondItem="25C-wN-ZoJ" secondAttribute="trailing" id="v5n-Zn-8XE"/>
+                            <constraint firstAttribute="bottom" secondItem="h6q-fb-NjH" secondAttribute="bottom" id="p0a-lb-w6L"/>
+                            <constraint firstAttribute="trailing" secondItem="25C-wN-ZoJ" secondAttribute="trailing" constant="-10" id="v5n-Zn-8XE"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="6d5-Rv-Pgr"/>
                     </view>
-                    <size key="freeformSize" width="650" height="140"/>
+                    <connections>
+                        <outlet property="pageController" destination="h6q-fb-NjH" id="yEn-kz-44y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfi-V6-rqH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1Xa-nY-Utn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2059" y="319"/>
+            <point key="canvasLocation" x="1820" y="321"/>
         </scene>
     </scenes>
     <resources>
