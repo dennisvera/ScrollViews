@@ -63,9 +63,9 @@ class ViewController: UIViewController {
     
     let show = (notification.name == UIResponder.keyboardWillShowNotification) ? true : false
     
-    let adjustmentHeight = (keyboardFrame.height + 20) * (show ? 1: -1)
-    fgScrollView.contentInset.bottom += adjustmentHeight
-    fgScrollView.scrollIndicatorInsets.bottom += adjustmentHeight
+    let adjustmentHeight = (keyboardFrame.height + 10) * (show ? 1: 0)
+    fgScrollView.contentInset.bottom = adjustmentHeight
+    fgScrollView.scrollIndicatorInsets.bottom = adjustmentHeight
   }
 }
 
