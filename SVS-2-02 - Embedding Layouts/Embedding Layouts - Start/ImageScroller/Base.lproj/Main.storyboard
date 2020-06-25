@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dMf-wh-djy">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Axh-TU-BPl">
+            <objects>
+                <viewController id="dMf-wh-djy" customClass="ViewController" customModule="ImageScroller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pb2-Ir-e32">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXx-dU-q0m">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soN-2W-yNh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="858.66666666666663"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lXG-Tr-l29">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="858.66666666666663"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="Vampire Toucan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HpC-hI-Jqe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Vampire Toucan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpE-eu-xly">
+                                                        <rect key="frame" x="92.000000000000014" y="383" width="191.33333333333337" height="33.666666666666686"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB1-vK-GqN">
+                                                        <rect key="frame" x="18.666666666666657" y="424.66666666666674" width="337.66666666666674" height="434"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <string key="text">The Vampire Toucan is a mysterious species of toucan found in the darkest rainforests of the Amazon.  This toucan gets its name from its jagged red-edged bill, which resembles bloodied teeth.  
+
+It is also much more likely to seek out lizards or even small birds for dinner than its more fruit-loving toucan cousins.  It is not very adept at flying, and is more likely to be spotted hopping from tree to tree.  
+
+The male Vampire Toucan is distinguished by an enormous flowing tail and an elaborate crest essential to successful mating displays.  Mating season may be the only time these birds see one another, as this particular type of toucan is largely solitary.</string>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="HpC-hI-Jqe" firstAttribute="height" secondItem="soN-2W-yNh" secondAttribute="width" id="5Yy-cK-VUf"/>
+                                            <constraint firstItem="lXG-Tr-l29" firstAttribute="trailing" secondItem="soN-2W-yNh" secondAttribute="trailing" id="DVd-8z-3Mb"/>
+                                            <constraint firstItem="fB1-vK-GqN" firstAttribute="width" secondItem="soN-2W-yNh" secondAttribute="width" multiplier="0.9" id="NYs-xj-o0d"/>
+                                            <constraint firstItem="lXG-Tr-l29" firstAttribute="top" secondItem="soN-2W-yNh" secondAttribute="top" id="Rjm-4v-ghU"/>
+                                            <constraint firstItem="lXG-Tr-l29" firstAttribute="bottom" secondItem="soN-2W-yNh" secondAttribute="bottom" id="aav-Oq-t5Q"/>
+                                            <constraint firstItem="lXG-Tr-l29" firstAttribute="leading" secondItem="soN-2W-yNh" secondAttribute="leading" id="rhU-pJ-QBu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ffe-aJ-i7e" firstAttribute="trailing" secondItem="soN-2W-yNh" secondAttribute="trailing" id="3cy-hz-aaR"/>
+                                    <constraint firstItem="soN-2W-yNh" firstAttribute="width" secondItem="mbG-2u-tc3" secondAttribute="width" id="9WG-8a-UaQ"/>
+                                    <constraint firstItem="soN-2W-yNh" firstAttribute="trailing" secondItem="Ffe-aJ-i7e" secondAttribute="trailing" id="KvS-9B-IEF"/>
+                                    <constraint firstItem="soN-2W-yNh" firstAttribute="top" secondItem="Ffe-aJ-i7e" secondAttribute="top" id="byR-OX-FmP"/>
+                                    <constraint firstItem="soN-2W-yNh" firstAttribute="bottom" secondItem="Ffe-aJ-i7e" secondAttribute="bottom" id="k5O-Yi-BEx"/>
+                                    <constraint firstItem="soN-2W-yNh" firstAttribute="leading" secondItem="Ffe-aJ-i7e" secondAttribute="leading" id="uxO-Rv-0N5"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Ffe-aJ-i7e"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="mbG-2u-tc3"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gXx-dU-q0m" firstAttribute="leading" secondItem="msS-FO-Fkv" secondAttribute="leading" id="TFw-g7-DIc"/>
+                            <constraint firstItem="msS-FO-Fkv" firstAttribute="trailing" secondItem="gXx-dU-q0m" secondAttribute="trailing" id="WEP-Gl-G5v"/>
+                            <constraint firstItem="msS-FO-Fkv" firstAttribute="bottom" secondItem="gXx-dU-q0m" secondAttribute="bottom" id="tpe-bv-3JZ"/>
+                            <constraint firstItem="gXx-dU-q0m" firstAttribute="top" secondItem="msS-FO-Fkv" secondAttribute="top" id="voJ-V9-KBr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="msS-FO-Fkv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6u-v6-NaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="87.192118226600982"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Vampire Toucan.jpg" width="401.22000122070312" height="571"/>
+    </resources>
+</document>
